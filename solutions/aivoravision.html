@@ -21,27 +21,26 @@
   
     <!-- Lottie Player Script -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
-
-<!-- Container for animation -->
-<div id="lottie-animation" style="width:300px; height:300px;"></div>
-
+<style>
+  .lottie-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+</style>
+<!-- Only this wrapper will be centered -->
+<div class="lottie-wrapper">
+  <div id="lottie-animation" style="width:300px; height:300px;"></div>
+</div>
 <script>
   var animation = lottie.loadAnimation({
     container: document.getElementById("lottie-animation"),
     renderer: "svg",
     loop: true,
     autoplay: true,
-    path: "animation.json" // your JSON file path
+    path: "animation.json"
   });
-  <style>
-  body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  </style>
 </script>
 
   <section class="hero glass">
